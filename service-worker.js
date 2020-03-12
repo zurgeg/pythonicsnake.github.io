@@ -1,4 +1,5 @@
 //This will make sure that pages load with a 200 OK response when offline
+/*
 self.addEventListener('install', (event) => {
   console.log('Inside the install handler:', event);
 });
@@ -10,6 +11,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener(fetch, (event) => {
   console.log('Inside the fetch handler:', event);
 });
+*/
 var APP_PREFIX = 'ApplicationName_'     // Identifier for this app (this needs to be consistent across every cache update)
 var VERSION = 'version_01'              // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + VERSION
