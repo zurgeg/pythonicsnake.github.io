@@ -1,5 +1,6 @@
-//This will make sure that pages load with a 200 OK response when offline
+
 /*
+This will make sure that pages load with a 200 OK response when offline
 self.addEventListener('install', (event) => {
   console.log('Inside the install handler:', event);
 });
