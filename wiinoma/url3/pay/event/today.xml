@@ -1,0 +1,25 @@
+<Event>
+  <ver>399</ver>
+  <date>2020-10-24</date>
+  <postertime>5</postertime>
+  <posterinfo>
+    <seq>1</seq>
+    <posterid>123</posterid>
+    <geofilter>0</geofilter>
+  </posterinfo>
+  <posterinfo>
+    <seq>2</seq>
+    <posterid>456</posterid>
+    <geofilter>0</geofilter>
+  </posterinfo>
+  <introinfo>
+    <seq>1</seq>
+    <cntid>1</cntid>
+    <cnttype>1</cnttype>
+    <dispsec>5</dispsec>
+    <dimg>1</dimg>
+    <random>0</random>
+    <linktype>5</linktype>
+    <linkid>1</linkid>
+  </introinfo>
+</Event>
