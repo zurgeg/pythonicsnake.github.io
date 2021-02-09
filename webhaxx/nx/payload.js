@@ -42,7 +42,7 @@ var g_rows2 = '2px,'.repeat(LENGTH_VALIDATION_MESSAGE / 8 - 2) + "2px";
 var g_round = 1;
 var g_input = null;
 
-var guess_htmltextarea_addr = new Int64("0x2031b00d8");
+var guess_htmltextarea_addr = new Int64("0x500000");
 
 
 /* Executed after deleteBubbleTree */
