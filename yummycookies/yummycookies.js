@@ -6,5 +6,5 @@ function yummyCookieTracer(){
     var trace = [];
   }
   trace.push(document.location);
-  document.cookie = btoa(JSON.stringify(trace));
+  document.cookie = escape(btoa(JSON.stringify(trace)));
 };
