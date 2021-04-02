@@ -1,6 +1,6 @@
 function yummyCookieTracer(){
   try {
-    var trace = JSON.parse(unescape(atob(document.cookie)));
+    var trace = JSON.parse(unescape(atob(document.cookie.replace(/\s/g, ''))));
   }
   catch(err) {
     var trace = [];
