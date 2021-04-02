@@ -4,6 +4,7 @@ function yummyCookieTracer(){
   }
   catch(err) {
     var trace = [];
+    console.log(err)
   }
   trace.push(document.location);
   document.cookie = escape(btoa(JSON.stringify(trace)));
